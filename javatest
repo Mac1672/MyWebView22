@@ -1,0 +1,97 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+//        for (int i = 0; i <= 15; i++) {
+//            for (int j = 1; j <= 15-i; j++) {
+//                System.out.print(" ");
+//            }
+//            for (int k = 1; k<=(i*2)+1; k++) {
+//                System.out.print("*");
+//            }
+//            System.out.println("");
+//        }
+
+
+//        int n;
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Input num : ");
+//        n = input.nextInt();
+//        for (int i = 0; i <= n; i++) {
+//            for (int j = 1; j <= n-i; j++) {
+//                System.out.print(" ");
+//            }
+//            for (int k = 1; k<=(i*2)+1; k++) {
+//                System.out.print("*");
+//            }
+//            System.out.println("");
+//        }
+
+
+//        int n;
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Input num : ");
+//        n = input.nextInt();
+//        for(int i=1;i<=n;i++){
+//            for(int j=i;j<=n+1;j++){
+//                System.out.print(" ");
+//            }
+//            for(int j=1;j<=i*2-1;j++){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+//        for(int i=1;i<n;i++){
+//            for(int j=1;j<=i+2;j++){
+//                System.out.print(" ");
+//            }
+//            for(int j=i;j<=(n-1)*2-i;j++){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+
+
+//        int n;
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Input num : ");
+//        n = input.nextInt();
+//        String str = "";
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = 1; j <= n-i; j++) {
+//                System.out.print(" ");
+//            }
+//                str = (i % 2) + " " + str;
+//                System.out.println(str);
+//            }
+
+
+        int money;
+        while (true) {
+            try {
+                Scanner in = new Scanner(System.in);
+                System.out.print("Money to chang : ");
+                money = in.nextInt();
+                if (money >= 0) break;
+            } catch (Exception e) {
+            }
+        }
+        int[] pay = new int[8];
+
+        int[] numpay = new int[]{1000,500, 100, 50, 20, 10, 5, 1};
+        for (int i = 0; i < pay.length; i++) {
+            pay[i] = money / numpay[i];
+            money = money % numpay[i];
+        }
+        System.out.println("1000 is : " + pay[0]);
+        System.out.println("500 is : " + pay[1]);
+        System.out.println("100 is : " + pay[2]);
+        System.out.println("50 is : " + pay[3]);
+        System.out.println("20 is : " + pay[4]);
+        System.out.println("10 is : " + pay[5]);
+        System.out.println("5 is : " + pay[6]);
+        System.out.println("1 is : " + pay[7]);
+
+        }
+    }
